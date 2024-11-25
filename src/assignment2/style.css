@@ -1,0 +1,98 @@
+:root {
+    --bgclr: gray;
+    --shadow: 0px 5px 4px rgba(255, 255, 255, 0.082);
+}
+
+.container {
+    background-color: rgb(50, 49, 49);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.container>p {
+    background-color: var(--bgclr);
+    padding: 3px;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 50%;
+    place-self: center;
+}
+
+.container form {
+    text-align: right;
+    background-color: var(--bgclr);
+    padding: 20px;
+    margin-top: -10px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.container label {
+    display: block;
+    cursor: pointer;
+
+}
+
+.container>form input {
+    background: none;
+    border-style: none;
+    border-bottom: solid 1.5px darkgray;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 75%;
+}
+
+.container>form>a {
+    /* text-align: center; */
+    width: max-content;
+    place-self: center;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.container button {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--bgclr);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.0rem;
+    box-shadow: var(--shadow);
+
+}
+
+.container button:hover {
+    background-color: lightgray;
+    transition: background-color 0.3s;
+    color: black;
+    box-shadow: none;
+}
+
+
+.container a {
+    display: block;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: var(--bgclr);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+
+}
+
+.container a:hover {
+    background-color: lightgray;
+    transition: background-color 0.3s;
+    color: black;
+    box-shadow: none;
+}

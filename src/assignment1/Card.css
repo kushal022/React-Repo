@@ -1,0 +1,67 @@
+.card-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.card-body {
+    width: 400px;
+    height: 550px;
+    background-color: rgb(68, 62, 62);
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: -1px 5px 10px rgba(252, 252, 252, 0.954);
+    box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+        0 8px 16px -8px hsla(0, 0%, 100%, 0.3),
+        0 -6px 16px -6px hsla(0, 33%, 99%, 0.03);
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: none;
+        transition: all ease 500ms;
+    }
+}
+
+/* .card-body::before {
+    content: "";
+    color: red;
+    position: absolute;
+    top: 550px;
+    left: 10px;
+    width: 95%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.046);
+    border-radius: 15px;
+    z-index: -5;
+
+} */
+
+.card-image {
+    width: 100%;
+    height: 230px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-detail-box {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-detail-box P {
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+.card-detail-box h4 {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.388);
+    margin-top: 1.2rem;
+}
+
+.card-detail-box h3 {
+    font-size: 1.5rem;
+}
