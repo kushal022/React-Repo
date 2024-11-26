@@ -10,6 +10,7 @@ import AppArray from './array/AppArray.jsx'
 import AppApi from './api/AppApi.jsx'
 import AppPropDrilling from './propDrilling/AppPropDrilling.jsx'
 import AppContextAPI from './contextAPI/AppContextAPI.jsx'
+import AppHook from './hook/useContext/AppHook.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +26,8 @@ function App() {
       {/* <AppArray /> */}
       {/* <AppApi /> */}
       {/* <AppPropDrilling /> */}
-      <AppContextAPI />
+      {/* <AppContextAPI /> */}
+      <AppHook />
     </>
   )
 }
