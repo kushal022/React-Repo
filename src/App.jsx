@@ -4,11 +4,12 @@ import AppProps from './props/AppProps.jsx'
 import AppCard from './assignment1/AppCard.jsx'
 import AppSignUp from './assignment2/AppSignUp.jsx'
 import AppMode from './projects/clrMode/AppMode.jsx'
-import AppMapping from './mapping/AppMapping.jsx'
 import AppState from './state/AppState.jsx'
+import AppMapping from './mapping/AppMapping.jsx'
 import AppArray from './array/AppArray.jsx'
 import AppApi from './api/AppApi.jsx'
 import AppPropDrilling from './propDrilling/AppPropDrilling.jsx'
+import AppContextAPI from './contextAPI/AppContextAPI.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,8 @@ function App() {
       {/* <AppMapping /> */}
       {/* <AppArray /> */}
       {/* <AppApi /> */}
-      <AppPropDrilling />
+      {/* <AppPropDrilling /> */}
+      <AppContextAPI />
     </>
   )
 }
