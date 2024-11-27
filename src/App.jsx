@@ -19,7 +19,7 @@ function App() {
     <>
       {/* <AppProps/> */}
       {/* < AppCard/> */}
-      {/* <AppSignUp/> */}
+      <AppSignUp/>
       {/* <AppMode /> */}
       {/* <AppState /> */}
       {/* <AppMapping /> */}
@@ -27,7 +27,7 @@ function App() {
       {/* <AppApi /> */}
       {/* <AppPropDrilling /> */}
       {/* <AppContextAPI /> */}
-      <AppHook />
+      {/* <AppHook /> */}
     </>
   )
 }

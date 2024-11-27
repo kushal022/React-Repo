@@ -1,7 +1,10 @@
 import React from 'react'
 import './style.css'
+import { useState } from 'react'
 
 function SignUp() {
+  
+
   return (
     <div className='container'>
       <h1 className='heading'>Sign Up!</h1>
