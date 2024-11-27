@@ -11,6 +11,7 @@ import AppApi from './api/AppApi.jsx'
 import AppPropDrilling from './propDrilling/AppPropDrilling.jsx'
 import AppContextAPI from './contextAPI/AppContextAPI.jsx'
 import AppHook from './hook/useContext/AppHook.jsx'
+import AppPswdRst from './assignment3/AppPswdRst.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,7 @@ function App() {
     <>
       {/* <AppProps/> */}
       {/* < AppCard/> */}
-      <AppSignUp/>
+      {/* <AppSignUp/> */}
       {/* <AppMode /> */}
       {/* <AppState /> */}
       {/* <AppMapping /> */}
@@ -28,6 +29,7 @@ function App() {
       {/* <AppPropDrilling /> */}
       {/* <AppContextAPI /> */}
       {/* <AppHook /> */}
+      <AppPswdRst />
     </>
   )
 }
