@@ -10,8 +10,9 @@ import AppArray from './array/AppArray.jsx'
 import AppApi from './api/AppApi.jsx'
 import AppPropDrilling from './propDrilling/AppPropDrilling.jsx'
 import AppContextAPI from './contextAPI/AppContextAPI.jsx'
-import AppHook from './hook/useContext/AppHook.jsx'
 import AppPswdRst from './assignment3/AppPswdRst.jsx'
+import AppHook from './hook/useContext/AppHook.jsx'
+import AppUseState from './hook/useState/AppUseState.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,8 +29,9 @@ function App() {
       {/* <AppApi /> */}
       {/* <AppPropDrilling /> */}
       {/* <AppContextAPI /> */}
+      {/* <AppPswdRst /> */}
       {/* <AppHook /> */}
-      <AppPswdRst />
+      <AppUseState/>
     </>
   )
 }
