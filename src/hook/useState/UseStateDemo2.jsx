@@ -13,6 +13,7 @@ function UseStateDemo2() {
     const printData =(e)=>{
         e.preventDefault()  // Prevent form from reloading
         console.log(form.username,form.password)
+        alert(`username:  ${form.username}, and password: ${form.password}`)
 
     }
   return (

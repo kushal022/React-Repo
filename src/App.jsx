@@ -13,9 +13,9 @@ import AppContextAPI from './contextAPI/AppContextAPI.jsx'
 import AppPswdRst from './assignment3/AppPswdRst.jsx'
 import AppHook from './hook/useContext/AppHook.jsx'
 import AppUseState from './hook/useState/AppUseState.jsx'
+import AppUseEffect from './hook/useEffect/AppUseEffect.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -31,7 +31,8 @@ function App() {
       {/* <AppContextAPI /> */}
       {/* <AppPswdRst /> */}
       {/* <AppHook /> */}
-      <AppUseState/>
+      {/* <AppUseState/> */}
+      <AppUseEffect/>
     </>
   )
 }
