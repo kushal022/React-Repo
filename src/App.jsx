@@ -14,6 +14,7 @@ import AppPswdRst from './assignment3/AppPswdRst.jsx'
 import AppHook from './hook/useContext/AppHook.jsx'
 import AppUseState from './hook/useState/AppUseState.jsx'
 import AppUseEffect from './hook/useEffect/AppUseEffect.jsx'
+import AppUseFetch from './hook/useFetch/AppUseFetch.jsx'
 
 function App() {
 
@@ -32,7 +33,8 @@ function App() {
       {/* <AppPswdRst /> */}
       {/* <AppHook /> */}
       {/* <AppUseState/> */}
-      <AppUseEffect/>
+      {/* <AppUseEffect/> */}
+      <AppUseFetch/>
     </>
   )
 }
