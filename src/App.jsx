@@ -15,6 +15,7 @@ import AppHook from './hook/useContext/AppHook.jsx'
 import AppUseState from './hook/useState/AppUseState.jsx'
 import AppUseEffect from './hook/useEffect/AppUseEffect.jsx'
 import AppUseFetch from './hook/useFetch/AppUseFetch.jsx'
+import AppForms from './forms/AppForms.jsx'
 
 function App() {
 
@@ -34,7 +35,8 @@ function App() {
       {/* <AppHook /> */}
       {/* <AppUseState/> */}
       {/* <AppUseEffect/> */}
-      <AppUseFetch/>
+      {/* <AppUseFetch/> */}
+      <AppForms/>
     </>
   )
 }

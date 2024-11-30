@@ -32,6 +32,8 @@
 
 import React, { useEffect, useState } from 'react';
 
+// Live Class: on Side Effect;useEffect()
+
 function ApiDemo1() {
     const [quotes, setQuotes] = useState([]); // Initialize as an array
     const [author, setAuthor] = useState([]);
