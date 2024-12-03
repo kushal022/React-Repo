@@ -16,6 +16,7 @@ import AppUseState from './hook/useState/AppUseState.jsx'
 import AppUseEffect from './hook/useEffect/AppUseEffect.jsx'
 import AppUseFetch from './hook/useFetch/AppUseFetch.jsx'
 import AppForms from './forms/AppForms.jsx'
+import AppLiveClass from './liveClass/AppLiveClass.jsx'
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
       {/* <AppState /> */}
       {/* <AppMapping /> */}
       {/* <AppArray /> */}
-      {/* <AppApi /> */}
+      <AppApi />
       {/* <AppPropDrilling /> */}
       {/* <AppContextAPI /> */}
       {/* <AppPswdRst /> */}
@@ -36,7 +37,8 @@ function App() {
       {/* <AppUseState/> */}
       {/* <AppUseEffect/> */}
       {/* <AppUseFetch/> */}
-      <AppForms/>
+      {/* <AppForms/> */}
+      {/* <AppLiveClass /> */}
     </>
   )
 }
