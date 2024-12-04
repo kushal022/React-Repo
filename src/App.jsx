@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+// import './App.css'
 import AppProps from './props/AppProps.jsx'
 import AppCard from './assignment1/AppCard.jsx'
 import AppSignUp from './assignment2/AppSignUp.jsx'
@@ -17,6 +17,7 @@ import AppUseEffect from './hook/useEffect/AppUseEffect.jsx'
 import AppUseFetch from './hook/useFetch/AppUseFetch.jsx'
 import AppForms from './forms/AppForms.jsx'
 import AppLiveClass from './liveClass/AppLiveClass.jsx'
+import AppTodo from './projects/todoApp/AppTodo.jsx'
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
       {/* <AppState /> */}
       {/* <AppMapping /> */}
       {/* <AppArray /> */}
-      <AppApi />
+      {/* <AppApi /> */}
       {/* <AppPropDrilling /> */}
       {/* <AppContextAPI /> */}
       {/* <AppPswdRst /> */}
@@ -39,6 +40,7 @@ function App() {
       {/* <AppUseFetch/> */}
       {/* <AppForms/> */}
       {/* <AppLiveClass /> */}
+      <AppTodo />
     </>
   )
 }

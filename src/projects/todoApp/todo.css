@@ -1,0 +1,12 @@
+.done {
+    text-decoration: line-through;
+}
+
+.pending {
+    text-decoration: none;
+}
+
+button {
+    width: 6rem;
+    height: 3rem;
+}
