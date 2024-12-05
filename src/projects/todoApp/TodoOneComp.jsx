@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './todo.css'
+import { MdDeleteForever } from "react-icons/md";
+import { FaCheckDouble } from "react-icons/fa";
 
 const TodoOneComp = () => {
     const [task, setTask] = useState([]);
@@ -63,24 +65,26 @@ const TodoOneComp = () => {
 
     // console.log('hello')
     return (
-        <main>
+        <main className='todo-container'>
             <header>
                 <h1>Todo Task</h1>
                 <p>{timeDate}</p>
             </header>
-            <section>
-                <form onSubmit={handleOnSubmit}>
+            <section className='todo-form-container'>
+                <form
+                    className='todo-form'
+                    onSubmit={handleOnSubmit}>
                     <input
                         type="text"
                         name='inputTask'
                         value={inputTask.taskName} // important
                         onChange={(e) => handleOnchangeInputTask(e.target.value)}
-                        placeholder='Add a Task'
+                        placeholder='Write your Task here !!'
                     ></input>
                     <button type="submit">Add Task</button>
                 </form>
             </section>
-            <section>
+            <section className='todo-list-container'>
                 <ul>
                     {
                         task.map((curTask) => {
@@ -89,20 +93,30 @@ const TodoOneComp = () => {
                                     key={curTask.id}
                                     className={curTask.done ? "done" : "pending"}
                                 >
-                                    {curTask.taskName}
-                                    <button onClick={() => handleDoneTask(curTask.taskName)}>Done</button>
-                                    <button onClick={() => handleDeleteTask(curTask.taskName)} >Delete</button>
+                                    <p
+                                        style={{ backgroundColor: curTask.done ? '#2c5d63' : '#a2c11c' }}
+                                    >{curTask.taskName}</p>
+                                    <button
+                                        style={{ color: curTask.done ? '#a2c11c' : '#2c5d63' }}
+                                        className='check-btn'
+                                        onClick={() => handleDoneTask(curTask.taskName)}><FaCheckDouble /></button>
+                                    <button
+                                        style={{ color: 'red' }}
+                                        className='delete-btn'
+                                        onClick={() => handleDeleteTask(curTask.taskName)} ><MdDeleteForever /></button>
                                 </li>
                             )
                         })
                     }
                 </ul>
             </section>
-            <section>
-                <button onClick={handleClearAllTask}>Clear All Tasks</button>
-                <p>Task Count: {task.length}</p>
-                <p>Task Completed: {task.filter(t => t.done).length}</p>
-                <p>Task Pending: {task.filter(t => !t.done).length}</p>
+            <section className='todo-footer'>
+                <div>
+                    <p>All Tasks: <span>{task.length}</span> </p>
+                    <p>Completed: <span> {task.filter(t => t.done).length}</span></p>
+                    <p>Pending: <span style={{ color: 'red' }}>{task.filter(t => !t.done).length}</span></p>
+                </div>
+                <button className='clear-btn' onClick={handleClearAllTask}>Clear All Tasks</button>
             </section>
         </main>
     )
