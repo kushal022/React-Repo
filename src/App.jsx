@@ -18,6 +18,8 @@ import AppUseFetch from './hook/useFetch/AppUseFetch.jsx'
 import AppForms from './forms/AppForms.jsx'
 import AppLiveClass from './liveClass/AppLiveClass.jsx'
 import AppTodo from './projects/todoApp/AppTodo.jsx'
+import AppRouter from './router/AppRouter.jsx'
+
 
 function App() {
 
@@ -40,7 +42,8 @@ function App() {
       {/* <AppUseFetch/> */}
       {/* <AppForms/> */}
       {/* <AppLiveClass /> */}
-      <AppTodo />
+      {/* <AppTodo /> */}
+      <AppRouter />
     </>
   )
 }

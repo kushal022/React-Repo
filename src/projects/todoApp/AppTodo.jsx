@@ -4,7 +4,7 @@ import TodoOneComp from './TodoOneComp'
 function AppTodo() {
     return (
         <div>
-            <h3>Todo App</h3>
+            <h3>Todo App Component</h3>
             <TodoOneComp />
         </div>
     )
