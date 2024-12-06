@@ -7,11 +7,12 @@ const ErrorPage = () => {
         }}>
             <img
                 style={{
-                    width: '50%',
-                    height: '70vh',
-                    // objectFit: 'cover',
+                    width: '100%',
+                    height: '100vh',
+                    objectFit: 'cover',
                 }}
-                src="https://th.bing.com/th/id/OIP.QbURL1GMcWBThvk4AP87kQAAAA?rs=1&pid=ImgDetMain" alt="" />
+                src="https://cdn.designbump.com/wp-content/uploads/2012/07/404_error_page.jpg"
+                alt="" />
 
         </div>
     )
