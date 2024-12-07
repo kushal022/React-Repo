@@ -41,9 +41,9 @@ function App() {
       {/* <AppUseEffect/> */}
       {/* <AppUseFetch/> */}
       {/* <AppForms/> */}
-      {/* <AppLiveClass /> */}
+      <AppLiveClass />
       {/* <AppTodo /> */}
-      <AppRouter />
+      {/* <AppRouter /> */}
     </>
   )
 }
