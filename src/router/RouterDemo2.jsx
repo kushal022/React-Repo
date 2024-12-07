@@ -9,6 +9,7 @@ import About from './About';
 import ErrorPage from './ErrorPage';
 import Location from './Location';
 import Form from './Form';
+import Students from './Students';
 function RouterDemo2() {
     return (
         <Router>
@@ -24,6 +25,9 @@ function RouterDemo2() {
                     {/* <Route path='/form' element={<Form />} /> */}
                     <Route path='form' element={<Form />} />
                 </Route>
+                {/* Url Params:  */}
+                {/* <Route path='/students/:id' element={<Students />} /> */}
+                <Route path='/students/:name' element={<Students />} />
                 {/* Error page route if invalid path enter user */}
                 <Route path='/*' element={<ErrorPage />} />
             </Routes>
