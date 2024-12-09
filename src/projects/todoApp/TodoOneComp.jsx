@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import './todo.css'
 import { MdDeleteForever } from "react-icons/md";
-import { FaCheckDouble } from "react-icons/fa";
+import { FaCheckDouble, FaEdit, } from "react-icons/fa";
+import { MdAddTask } from "react-icons/md";
 
 const TodoOneComp = () => {
     const [task, setTask] = useState([]);
     const [inputTask, setInputTask] = useState({ id: '', taskName: '', done: false });
     const [timeDate, setTimeDate] = useState('')
+    const [isEditTask, setIsEditTask] = useState(null)
+    const [toggleSubmit, setToggleSubmit] = useState(true)
 
     // handel onChange/ Input Task functionality
     const handleOnchangeInputTask = (value) => {
-        setInputTask({ id: value, taskName: value, done: false });
+        setInputTask({ id: '', taskName: value, done: false });
     }
 
     // handle form submit
@@ -19,23 +22,53 @@ const TodoOneComp = () => {
         // Destracture input Obj 
         const { id, taskName, done } = inputTask;
         // if taskName is empty, do not add again
-        if (taskName === '') return;
-        // check if task already exists
-        const isTaskNameMatch = task.find((curTask) => curTask.taskName === taskName)
-        // if task already exists, do not add again
-        if (isTaskNameMatch) return;
+        if (taskName === '') {
+            alert('Please Enater Your Task..!')
+        } else if (taskName && !toggleSubmit) {
+            setTask(
+                task.map(curTask => {
+                    if (curTask.id === isEditTask) {
+                        return { ...curTask, taskName: inputTask.taskName }
+                    }
+                    return curTask;
+                })
+            )
+            setToggleSubmit(true)
+            setIsEditTask(null)
+            setInputTask({ id: '', taskName: '', done: false });
 
-        // set input task to task array
-        setTask((prevTask) => [...prevTask, { id: id, taskName: taskName, done: done }])
-        //set input task initial
-        setInputTask({ id: '', taskName: '', done: false });
+        } else {
+            // if task already exists, do not add again
+            const isTaskNameMatch = task.find((curTask) => curTask.taskName === taskName)
+            if (isTaskNameMatch) return;
+
+            // generate unique id for each task
+            const taskId = Date.now();
+            // set input task to task array
+            setTask((prevTask) => [...prevTask, { id: taskId, taskName: taskName, done: done }])
+            //set input task initial
+            setInputTask({ id: '', taskName: '', done: false });
+        }
     }
 
     // handle delete task functionality
-    const handleDeleteTask = (curTaskValue) => {
-        const updatedTasks = task.filter(t => t.taskName !== curTaskValue) // remember that true values are included in it and falsy excluded
+    const handleDeleteTask = (curTaskId) => {
+        const updatedTasks = task.filter(t => t.id !== curTaskId) // remember that true values are included in it and falsy excluded
         setTask(updatedTasks)
     }
+
+    // handle edit task functionality
+    const handleEditTask = (curTaskId) => {
+        const editTask = task.find(t => {
+            return t.id === curTaskId
+        })
+        console.log(curTaskId)
+        // setIsEditTask(editTask.id)
+        setIsEditTask(curTaskId)
+        setInputTask(editTask)
+        setToggleSubmit(false)
+    }
+
     // handle Done task functionality:
     const handleDoneTask = (curTaskValue) => {
         const doneTask = task.map(curTask => {
@@ -71,9 +104,7 @@ const TodoOneComp = () => {
                 <p>{timeDate}</p>
             </header>
             <section className='todo-form-container'>
-                <form
-                    className='todo-form'
-                    onSubmit={handleOnSubmit}>
+                <form className='todo-form' onSubmit={handleOnSubmit}>
                     <input
                         type="text"
                         name='inputTask'
@@ -81,7 +112,9 @@ const TodoOneComp = () => {
                         onChange={(e) => handleOnchangeInputTask(e.target.value)}
                         placeholder='Write your Task here !!'
                     ></input>
-                    <button type="submit">Add Task</button>
+                    <button type="submit">
+                        {toggleSubmit ? <MdAddTask /> : <FaEdit />}
+                    </button>
                 </form>
             </section>
             <section className='todo-list-container'>
@@ -94,16 +127,22 @@ const TodoOneComp = () => {
                                     className={curTask.done ? "done" : "pending"}
                                 >
                                     <p
-                                        style={{ backgroundColor: curTask.done ? '#2c5d63' : '#a2c11c' }}
+                                        style={{ backgroundColor: curTask.done || curTask.id === isEditTask ? '#2c5d63' : '#a2c11c' }}
                                     >{curTask.taskName}</p>
                                     <button
                                         style={{ color: curTask.done ? '#a2c11c' : '#2c5d63' }}
                                         className='check-btn'
                                         onClick={() => handleDoneTask(curTask.taskName)}><FaCheckDouble /></button>
+
+                                    <button
+                                        style={{ color: curTask.id === isEditTask ? '#a2c11c' : '#2c5d63' }}
+                                        className='edit-btn'
+                                        onClick={() => handleEditTask(curTask.id)}
+                                    ><FaEdit /></button>
                                     <button
                                         style={{ color: 'red' }}
                                         className='delete-btn'
-                                        onClick={() => handleDeleteTask(curTask.taskName)} ><MdDeleteForever /></button>
+                                        onClick={() => handleDeleteTask(curTask.id)} ><MdDeleteForever /></button>
                                 </li>
                             )
                         })

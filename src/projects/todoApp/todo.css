@@ -85,10 +85,11 @@
     color: var(--clr1);
     border: none;
     border-radius: 5px;
-    padding: 10px 0.2rem;
+    padding: 5px 0rem;
     cursor: pointer;
-    width: 5.5rem;
+    width: 5rem;
     font-weight: 700;
+    font-size: 1.3rem;
     box-shadow: inset 0px 0px 10px 1px var(--clr1);
     transition: 0.1s;
 
@@ -135,7 +136,7 @@
     background-color: var(--clr3);
     padding: 0.5rem 0.5rem;
     border-radius: 5px;
-    text-wrap: wrap;
+    /* text-wrap: wrap; */
     width: inherit;
     box-shadow: inset 0px 0px 10px 1px var(--clr1),
         0px 0px 10px 0px rgba(0, 0, 0, 0.3);
